@@ -1,3 +1,4 @@
+const e = require("express");
 const express = require("express")
 const app = express()
 const PORT = 3000;
@@ -11,8 +12,26 @@ const path = require("path")
 // })
 const filepath2 = path.join(__dirname, "files", "file02.txt")
 const filepath = path.join(__dirname, "files", "file01.txt")
+const filepathsettings = path.join(__dirname, 'config.json')
+
+const settings = () => {
+  fs.readFile(filepathsettings, "utf-8", (err, data) => {
+    fs.writeFile(filepathsettings, 'dafafaa', (err) => {
+      if (err) throw err
+      console.log('zapisano');
+    })
+    console.log(data.toString());
+
+  })
+
+}
+
+
 
 app.get('/', function (req, res) {
+
+
+
   // fs.readFile("./files/file01.txt", (err, data) => {
   //   if (err) throw err
   //   console.log(data.toString());
@@ -20,15 +39,15 @@ app.get('/', function (req, res) {
   //   //Zczytywanie informacji z pliku
   //-----------------------------------------------------------------------
 
-  fs.readFile("./files/file01.txt", "utf-8", (err, data) => {
-    fs.appendFile(filepath, 'tekst do wpisania', (err) => {
-      if (err) throw err
-      console.log("plik zapisany");
-    })
-    if (err) throw err
-    console.log(data.toString());
+  // fs.readFile("./files/file01.txt", "utf-8", (err, data) => {
+  //   fs.appendFile(filepath, 'tekst do wpisania', (err) => {
+  //     if (err) throw err
+  //     console.log("plik zapisany");
+  //   })
+  //   if (err) throw err
+  //   console.log(data.toString());
 
-  })
+  // })
   //Zczytywanie informacji z pliku z kodowaniem
   //-----------------------------------------------------------------------
 
