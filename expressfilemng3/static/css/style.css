@@ -1,3 +1,7 @@
+:root {
+    --background-nice: linear-gradient(277deg, rgba(121, 9, 102, 0.9248074229691877) 57%, rgba(0, 212, 255, 1) 100%);
+}
+
 table td {
     padding: 10px;
     min-width: 10px;
@@ -18,4 +22,19 @@ h3 {
 
 .second {
     margin-left: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(121, 9, 102);
+    /* background: linear-gradient(277deg, rgba(121, 9, 102, 0.9248074229691877) 57%, rgba(0, 212, 255, 1) 100%); */
+    width: 100%;
+    height: 250px
+}
+
+h4 {
+    text-align: center;
 }

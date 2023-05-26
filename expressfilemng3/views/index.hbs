@@ -39,9 +39,25 @@
         </table>
     </div>
 </div> --}}
-<div>
-    <form>
-        <input type="hidden" name="root" value="{{root}}" />
-        <input type="text" name="folder" />
-    </form>
+<div class="header">
+    <h4>FILEMENAGER</h1>
 </div>
+<div class="buttons">
+    <input type="button" name="newfolder" title="Nowy folder" value="Nowy Folder">
+    <input type="button" name="newtxt" title="Nowy pliktxt" value="Nowy Plik Tekstowy">
+
+    <button onclick="showDialog()" value="DODAJ">
+
+</div>
+<dialog id="myDialog">
+    <input type="text" name="getter">
+</dialog>
+
+<script defer>
+    function showDialog() {
+        const element = document.getElementById("myDialog").showModal();
+    }
+
+    showDialog()
+
+</script>
